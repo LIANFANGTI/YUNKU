@@ -1,0 +1,18 @@
+.container-fluid{
+	margin:10% auto;
+	width:50%;
+	
+}
+table th,table td{
+	text-align:center;
+}
+.container td:last-child{
+	vertical-align:middle;
+}
+.container td:nth-last-child(2){
+	vertical-align: middle;
+	
+}
+.button{
+	display:none;
+}

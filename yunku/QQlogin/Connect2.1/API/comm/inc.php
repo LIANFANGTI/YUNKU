@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101291942","appkey":"97915b0638fc40eab0141532ba196ac5","callback":"http://www.zduber.com/yunku/QQlogin/codeback.php","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

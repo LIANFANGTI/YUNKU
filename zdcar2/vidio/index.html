@@ -1,0 +1,678 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/ui-base.css">
+    <link rel="stylesheet" href="css/ui-box.css">
+    <link rel="stylesheet" href="css/ui-color.css">
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="demo-css-js/video-js.css" rel="stylesheet" type="text/css">
+    <link href="demo-css-js/video-js-smail.css" rel="stylesheet" type="text/css">
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script src="demo-css-js/video.js"></script>
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+</head>
+<body>
+<script src="css/jquery.js"></script>
+    <div class="ub ub-ver ub-fh ub-ac ub-pc">
+        <div class="ub ub-fh z-index1 mt1-5">
+            <div id="top_left" class="ml46"></div>
+            <div class="tx-c myfont uts fs1-8" id="top_mid">VIDEO</div>
+            <div class="left ml20" id="top_right">
+                <div class="uc-a1 uinput myblack left ">
+                    <div class="iconfont-sousuo fa ub-img left m0-8"></div>
+                    <div class="mt0-8 left">
+                        <input type="text" placeholder="请输入关键字" class="left bc-text-head myfont fs1 "id="text"onkeypress="getKey();">
+                    </div>
+                </div>
+                <div class="bc-bg tx-c  left uinput uc-a3 fs1 mt0-685">
+                    <input type="button" value="Search" class="uba b-bla uinn5 uc-a us-i myfont-huise"id="button">
+                </div>
+            </div>
+        </div>
+        <!--视频-->
+        <div class="ub ub-fh ub-ac ub-pc z-index1 mt1-5">
+            <video id="example_video_1" class="video-js vjs-default-skin-smail fg-huise" controls preload="none" width="640" height="344"
+                   poster="img/yule-1.jpg"
+                   data-setup="{}">
+                <source src="video/yule-1.mp4" type='video/mp4' />
+                <source src="video/yule-1.mp4" type='video/webm' />
+                <source src="video/yule-1.mp4" type='video/ogg' />
+                <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+            </video>
+        </div>
+        <!--滑动字体-->
+        <div class="ub ub-fh ub-ac ub-pc ub-ver uts z-index1 mt2 fs1-5">
+            <div class="ub ub-ac ub-pc">
+                <a id="dianshijv" class="myfont-heise ub-f1 hand">dianshijv</a>
+                <a id="zongyi" class="myfont-heise ub-f1 hand ml1-2">zongyi</a>
+                <a id="xinwen" class="myfont-heise ub-f1 hand ml1-2">xinwen</a>
+                <a id="yule" class="ub-f1 myfont hand ml1-2">yule</a>
+            </div>
+        </div>
+        <!--滑动模块-->
+        <div class="ub ub-fh ub-ac ub-pc uts-baise z-index1 mt1">
+            <div class="shuipingxian ub ub-ac ub-pc fg-baise uc-a2"></div>
+        </div>
+        <div class="ub ub-ac ub-pc uts-baise z-index1 mt-0-3">
+            <div class="shuipingxian-duan ub ub-ac ub-pc fg-baise uc-a2 relative ml25" id="shuipingxian-duan"></div>
+        </div>
+        <!--下方滑动Div-yule-->
+        <div class="ub ub-ac ub-pc left" id="all">
+            <div class="ub ub-ac ub-pc left uof z-index1 relative two" id="Div-yule">
+                    <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14">
+                        <video id="example_video_1-1" class="fg-baise video-js vjs-default-skin hand m1" preload="none" width="210" height="135"
+                               poster="img/yule-1.jpg"
+                                >
+                            <source src="video/yule-1.mp4" type='video/mp4' />
+                            <source src="video/yule-1.mp4" type='video/webm' />
+                            <source src="video/yule-1.mp4" type='video/ogg' />
+                            <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                            <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        </video>
+                    </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_1-2" class="fg-baise video-js vjs-default-skin hand m1"  preload="none" width="210" height="135"
+                           poster="img/yule-2.jpg"
+                          >
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_1-3" class="fg-baise video-js vjs-default-skin" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}" style="margin: 1em">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_1-4" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_1-5" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+            </div>
+            <!--下方滑动Div-dianshijv-->
+            <div class="ub ub-ac ub-pc left uof z-index1 absolute right-150 three" id="Div-dianshijv">
+                <div class="left ub ub-f1 ub-ac ub-pc " style="z-index: 1;margin-top: 14em">
+                    <video id="example_video_2-1" class="fg-baise video-js vjs-default-skin hand m1" preload="none" width="210" height="135"
+                           poster="img/dianshiju-1.jpg"
+                           >
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_2-2" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_2-3" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_2-4" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_2-5" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+            </div>
+            <!--下方滑动Div-zongyi-->
+            <div class="ub ub-ac ub-pc left uof z-index1 absolute right150 one" id="Div-zongyi">
+                <div class="left ub ub-f1 ub-ac ub-pc " style="z-index: 1;margin-top: 14em">
+                    <video id="example_video_3-1" class="fg-baise video-js vjs-default-skin hand m1" preload="none" width="210" height="135"
+                           poster="img/zongyi-1.jpg"
+                           >
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_3-2" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_3-3" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_3-4" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_3-5" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+            </div>
+            <!--下方滑动Div-xinwen-->
+            <div class="ub ub-ac ub-pc left uof z-index1 absolute right-150 four" id="Div-xinwen">
+                <div class="left ub ub-f1 ub-ac ub-pc " style="z-index: 1;margin-top: 14em">
+                    <video id="example_video_4-1" class="fg-baise video-js vjs-default-skin hand m1" preload="none" width="210" height="135"
+                           poster="img/xinwen-1.jpg"
+                           >
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_4-2" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_4-3" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_4-4" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+                <div class="left ub ub-f1 ub-ac ub-pc z-index1 mt14 ml5">
+                    <video id="example_video_4-5" class="fg-baise video-js vjs-default-skin m1" controls preload="none" width="210" height="135"
+                           poster="http://video-js.zencoder.com/oceans-clip.png"
+                           data-setup="{}">
+                        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                        <track kind="subtitles" src="demo-css-js/demo.captions.vtt" srclang="en" label="English">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <!--底图-->
+        <div class="ub ub-ac ub-pc z-index-1 mt-58-8">
+            <img src="img/img.jpg" width="100%" height="996em">
+        </div>
+    </div>
+<!--滑动模块字体-->
+    <script>
+        $(document).ready(function() {
+            $("#dianshijv").click(function(){
+                $('#shuipingxian-duan').animate({right:'23em'},"fast");
+                document.getElementById("dianshijv").className="myfont hand";document.getElementById("xinwen").className="myfont-heise hand ml1-2";
+                document.getElementById("zongyi").className="myfont-heise hand ml1-2";document.getElementById("yule").className="myfont-heise hand ml1-2";
+            });
+        });
+        $(document).ready(function() {
+            $("#zongyi").click(function(){
+                $('#shuipingxian-duan').animate({right:'15em'},"fast");
+                document.getElementById("dianshijv").className="myfont-heise hand";document.getElementById("xinwen").className="myfont-heise hand ml1-2";
+                document.getElementById("zongyi").className="myfont hand ml1-2";document.getElementById("yule").className="myfont-heise hand ml1-2";
+            });
+        });
+        $(document).ready(function() {
+            $("#xinwen").click(function(){
+                $('#shuipingxian-duan').animate({right:'7em'},"fast");
+                document.getElementById("dianshijv").className="myfont-heise hand";document.getElementById("xinwen").className="myfont ml1-2 hand";
+                document.getElementById("zongyi").className="myfont-heise hand ml1-2";document.getElementById("yule").className="myfont-heise ml1-2 hand";
+            });
+        });
+        $(document).ready(function() {
+            $("#yule").click(function(){
+                $('#shuipingxian-duan').animate({right:'0em'},"fast");
+                document.getElementById("dianshijv").className="myfont-heise hand";document.getElementById("xinwen").className="myfont-heise hand ml1-2";
+                document.getElementById("zongyi").className="myfont-heise hand ml1-2";document.getElementById("yule").className="myfont hand ml1-2";
+            });
+        });
+    </script>
+<!--滑动视频模块-->
+    <script>
+        $(document).ready(function() {
+            $("#dianshijv").click(function(){
+                if($("#Div-yule").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'150em'},"fast");
+                    },300);
+                    $("#Div-yule").addClass("one");$("#Div-yule").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-dianshijv").addClass("two");$("#Div-dianshijv").removeClass("three");
+                }
+                if($("#Div-zongyi").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'150em'},"fast");
+                    },300);
+                    $("#Div-zongyi").addClass("one");$("#Div-zongyi").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-dianshijv").addClass("two");$("#Div-dianshijv").removeClass("three");
+                }
+                if($("#Div-xinwen").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'-150em'},"fast");
+                    },300);
+                    $("#Div-xinwen").addClass("four");$("#Div-xinwen").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-dianshijv").addClass("two");$("#Div-dianshijv").removeClass("three");
+                }
+            })
+        });
+        $(document).ready(function() {
+            $("#yule").click(function(){
+                if($("#Div-dianshijv").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'-150em'},"fast")
+                    },300);
+                    $("#Div-dianshijv").addClass("three");$("#Div-dianshijv").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-yule").addClass("two");$("#Div-yule").removeClass("one");
+                }
+                if($("#Div-zongyi").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-zongyi").addClass("one");$("#Div-zongyi").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-yule").addClass("two");$("#Div-yule").removeClass("one");
+                }
+                if($("#Div-xinwen").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'-150em'},"fast");
+                    },300);
+                    $("#Div-xinwen").addClass("four");$("#Div-xinwen").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-yule").addClass("two");$("#Div-yule").removeClass("one");
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("#zongyi").click(function(){
+                if($("#Div-dianshijv").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'-150em'},"fast")
+                    },300);
+                    $("#Div-dianshijv").addClass("three");$("#Div-dianshijv").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-zongyi").addClass("two");$("#Div-zongyi").removeClass("one");
+                }
+                if($("#Div-yule").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-yule").addClass("one");$("#Div-yule").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-zongyi").addClass("two");$("#Div-zongyi").removeClass("one");
+                }
+                if($("#Div-xinwen").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'-150em'},"fast");
+                    },300);
+                    $("#Div-xinwen").addClass("four");$("#Div-xinwen").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-zongyi").addClass("two");$("#Div-zongyi").removeClass("one");
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("#xinwen").click(function(){
+                if($("#Div-yule").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-yule").addClass("one");$("#Div-yule").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-xinwen").addClass("two");$("#Div-xinwen").removeClass("four");
+                }
+                if($("#Div-dianshijv").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'-150em'},"fast")
+                    },300);
+                    $("#Div-dianshijv").addClass("three");$("#Div-dianshijv").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-xinwen").addClass("two");$("#Div-xinwen").removeClass("four");
+                }
+                if($("#Div-zongyi").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-zongyi").addClass("one");$("#Div-zongyi").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-xinwen").addClass("two");$("#Div-xinwen").removeClass("four");
+                }
+            })
+        })
+    </script>
+<!--触发视频模块-->
+    <script>
+        var video = $('#example_video_1');
+            $("#example_video_1-1").click(function () {
+                video.attr("src", "video/yule-1.mp4");//更新url
+                video[0].play();
+            })
+    </script>
+    <script>
+        var video = $('#example_video_1');
+        $(document).ready(function() {
+            $("#example_video_1-2").click(function () {
+                video.attr("src", "video/yule-2.mp4");//更新url
+                video[0].play();
+            })
+        })
+    </script>
+<script>
+    var video = $('#example_video_1');
+    $(document).ready(function() {
+        $("#example_video_2-1").click(function () {
+            video.attr("src", "video/dianshiju.mp4");//更新url
+            video[0].play();
+        })
+    })
+</script>
+<script>
+    var video = $('#example_video_1');
+    $(document).ready(function() {
+        $("#example_video_3-1").click(function () {
+            video.attr("src", "video/zongyi.mp4");//更新url
+            video[0].play();
+        })
+    })
+</script>
+<script>
+    var video = $('#example_video_1');
+    $(document).ready(function() {
+        $("#example_video_4-1").click(function () {
+            video.attr("src", "video/xinwen.mp4");//更新url
+            video[0].play();
+        })
+    })
+</script>
+<!--搜索引擎-->
+<script>
+    $(document).ready(function(){
+        $("#button").click(function(){
+            var sum=document.getElementById("text").value;
+            if(sum.indexOf("花") >=0 ||sum.indexOf("hua") >=0)
+            {
+                $('#shuipingxian-duan').animate({right:'23em'},"fast");
+                document.getElementById("dianshijv").className="myfont hand";document.getElementById("xinwen").className="myfont-heise hand ml1-2";
+                document.getElementById("zongyi").className="myfont-heise hand ml1-2";document.getElementById("yule").className="myfont-heise hand ml1-2";
+                if($("#Div-yule").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'150em'},"fast");
+                    },300);
+                    $("#Div-yule").addClass("one");$("#Div-yule").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-dianshijv").addClass("two");$("#Div-dianshijv").removeClass("three");
+                }
+                if($("#Div-zongyi").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'150em'},"fast");
+                    },300);
+                    $("#Div-zongyi").addClass("one");$("#Div-zongyi").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-dianshijv").addClass("two");$("#Div-dianshijv").removeClass("three");
+                }
+                if($("#Div-xinwen").attr("class").indexOf("two") >=1) {
+                    setTimeout(function () {
+                        $('#Div-xinwen').animate({right: '-150em'}, "fast");
+                    }, 300);
+                    $("#Div-xinwen").addClass("four");
+                    $("#Div-xinwen").removeClass("two");
+                    setTimeout(function () {
+                        $('#Div-dianshijv').animate({right: '0em'}, "fast");
+                    }, 600);
+                    $("#Div-dianshijv").addClass("two");
+                    $("#Div-dianshijv").removeClass("three");
+                }
+            }
+            else if(sum.indexOf("xin") >=0 ||sum.indexOf("新") >=0||sum.indexOf("ma") >=0||sum.indexOf("马") >=0||sum.indexOf("超") >=0||sum.indexOf("chao") >=0||sum.indexOf("bian") >=0||sum.indexOf("蝙") >=0)
+            {
+                $('#shuipingxian-duan').animate({right:'7em'},"fast");
+                document.getElementById("dianshijv").className="myfont-heise hand";document.getElementById("xinwen").className="myfont ml1-2 hand";
+                document.getElementById("zongyi").className="myfont-heise hand ml1-2";document.getElementById("yule").className="myfont-heise ml1-2 hand";
+                if($("#Div-yule").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-yule").addClass("one");$("#Div-yule").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-xinwen").addClass("two");$("#Div-xinwen").removeClass("four");
+                }
+                if($("#Div-dianshijv").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'-150em'},"fast")
+                    },300);
+                    $("#Div-dianshijv").addClass("three");$("#Div-dianshijv").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-xinwen").addClass("two");$("#Div-xinwen").removeClass("four");
+                }
+                if($("#Div-zongyi").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-zongyi").addClass("one");$("#Div-zongyi").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-xinwen").addClass("two");$("#Div-xinwen").removeClass("four");
+                }
+            }
+            else if(sum.indexOf("zong") >=0 ||sum.indexOf("综") >=0||sum.indexOf("爆") >=0||sum.indexOf("bao") >=0)
+            {
+                $('#shuipingxian-duan').animate({right:'15em'},"fast");
+                document.getElementById("dianshijv").className="myfont-heise hand";document.getElementById("xinwen").className="myfont-heise hand ml1-2";
+                document.getElementById("zongyi").className="myfont hand ml1-2";document.getElementById("yule").className="myfont-heise hand ml1-2";
+                if($("#Div-dianshijv").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'-150em'},"fast")
+                    },300);
+                    $("#Div-dianshijv").addClass("three");$("#Div-dianshijv").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-zongyi").addClass("two");$("#Div-zongyi").removeClass("one");
+                }
+                if($("#Div-yule").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-yule").addClass("one");$("#Div-yule").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-zongyi").addClass("two");$("#Div-zongyi").removeClass("one");
+                }
+                if($("#Div-xinwen").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'-150em'},"fast");
+                    },300);
+                    $("#Div-xinwen").addClass("four");$("#Div-xinwen").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-zongyi").addClass("two");$("#Div-zongyi").removeClass("one");
+                }
+            }
+            else if(sum.indexOf("yu") >=0 ||sum.indexOf("bai") >=0||sum.indexOf("白") >=0||sum.indexOf("别") >=0||sum.indexOf("bie") >=0)
+            {
+                $('#shuipingxian-duan').animate({right:'0em'},"fast");
+                document.getElementById("dianshijv").className="myfont-heise hand";document.getElementById("xinwen").className="myfont-heise hand ml1-2";
+                document.getElementById("zongyi").className="myfont-heise hand ml1-2";document.getElementById("yule").className="myfont hand ml1-2";
+                if($("#Div-dianshijv").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-dianshijv').animate({right:'-150em'},"fast")
+                    },300);
+                    $("#Div-dianshijv").addClass("three");$("#Div-dianshijv").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-yule").addClass("two");$("#Div-yule").removeClass("one");
+                }
+                if($("#Div-zongyi").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-zongyi').animate({right:'150em'},"fast")
+                    },300);
+                    $("#Div-zongyi").addClass("one");$("#Div-zongyi").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-yule").addClass("two");$("#Div-yule").removeClass("one");
+                }
+                if($("#Div-xinwen").attr("class").indexOf("two") >=1){
+                    setTimeout(function(){
+                        $('#Div-xinwen').animate({right:'-150em'},"fast");
+                    },300);
+                    $("#Div-xinwen").addClass("four");$("#Div-xinwen").removeClass("two");
+                    setTimeout(function(){
+                        $('#Div-yule').animate({right:'0em'},"fast");
+                    },600);
+                    $("#Div-yule").addClass("two");$("#Div-yule").removeClass("one");
+                }
+            }
+            else{
+                alert("抱歉，没有您想查询的资讯")
+            }
+        })
+    })
+    function getKey()
+    {
+        if(event.keyCode==13){
+            document.getElementById("button").click();
+        }
+    }
+</script>
+</body>
+</html>

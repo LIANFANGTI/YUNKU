@@ -1,0 +1,266 @@
+.ub
+{
+	display: -webkit-box !important;
+	display: box !important;
+	position:relative;
+}
+
+.ub-rev
+{
+	-webkit-box-direction:reverse;
+	box-direction:reverse;
+}
+
+.ub-fh
+{
+	width:100%;
+}
+
+.ub-fv
+{
+	height:100%;
+}
+
+.ub-con
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.ub-ac
+{
+	-webkit-box-align:center;
+	box-align:center;
+}
+.ub-ae
+{
+	-webkit-box-align:end;
+	box-align:end;
+}
+
+.ub-pc
+{
+	-webkit-box-pack:center;
+	box-pack:center;
+}
+.ub-pe
+{
+	-webkit-box-pack:end;
+	box-pack:end;
+}
+.ub-pj
+{
+	-webkit-box-pack:justify;
+	box-pack:justify;
+}
+
+.ub-ver
+{
+	-webkit-box-orient:vertical;
+	box-orient:vertical;
+}
+
+.ub-f1
+{
+	position:relative;
+	-webkit-box-flex: 1; 
+	box-flex: 1;
+}
+
+.ub-f2
+{
+	position:relative;
+	-webkit-box-flex: 2;
+	box-flex: 2; 
+}
+
+.ub-f3
+{
+	position:relative;
+	-webkit-box-flex: 3;
+	box-flex: 3;
+}
+
+.ub-f4
+{
+	position:relative;
+	-webkit-box-flex: 4;
+	box-flex: 4;
+}
+
+.ub-img
+{
+	-webkit-background-size:contain;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.ub-img1
+{
+	-webkit-background-size:cover;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.ub-img2
+{
+	background-repeat:repeat-x;
+	background-size:auto 100%
+}
+.ub-img3
+{
+	background-repeat:repeat-y;
+	background-size:100% auto
+}
+
+.ub-img4
+{
+	-webkit-background-size:100% auto;
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.ub-img5
+{
+	-webkit-background-size:auto 100%;
+	background-size:auto 100%;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.ub-img6
+{
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.ub-img7
+{
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.img
+{
+	width:100%;
+
+	min-width:1000px;
+
+	width:expression_r(document.body.clientWidth < 1000 ? "1000px": "auto" );
+
+
+}
+.iconfont-sousuo {
+	width: 1.3em;
+	height: 1.3em;
+	background: url(../img/iconfont-sousuo.png) no-repeat;
+	background-size: 1.3em 1.3em
+}
+.uinput input, .uinput textarea {
+	margin: 0px;
+	border: 0px;
+	-webkit-appearance: none;
+	background: none;
+	text-decoration: none;
+	font-size: 1em;
+	display: block;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.shuipingxian{
+	width: 40em;
+	height: 0.3em;
+	background-color: black;
+}
+.shuipingxian-duan{
+	width: 7em;
+	height: 0.3em;
+	background-color: white;
+}
+.z-index1{
+	z-index: 1;
+}
+.mt1-5{
+	margin-top: 1.5em;
+}
+.ml46{
+	margin-left: 46%;
+}
+.ml20{
+	margin-left: 20%;
+}
+.m0-8{
+	margin: 0.8em;
+}
+.mt0-8{
+	margin-top: 0.8em
+}
+.mt0-685{
+	margin-top: 0.685em;
+}
+.mt1-5{
+	margin-top: 1.5em;
+}
+.mt2{
+	margin-top: 2em;
+}
+.ml1-2{
+	margin-left: 1.2em;
+}
+.mt1{
+	margin-top: 1em;
+}
+.mt-0-3{
+	margin-top: -0.3em;
+}
+.relative{
+	position: relative;
+}
+.ml25{
+	margin-left: 25em;
+}
+.mt14{
+	margin-top: 14em;
+}
+.ml5{
+	margin-left: 5em;
+}
+.absolute{
+	position: absolute;
+}
+.right-150{
+	right: -150em;
+}
+.z-index-1{
+	z-index: -1;
+}
+.z-index2{
+	z-index: 2;
+}
+.mt-58-8{
+	margin-top: -58.8em
+}
+.right150{
+	right: 150em;
+}
+.one{
+
+}
+.two{
+
+}
+.three{
+
+}
+.four{
+
+}
+.m1{
+	margin: 1em;
+}

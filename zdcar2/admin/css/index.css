@@ -1,0 +1,590 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "微软雅黑";
+	font-size:12px;
+	/*设置body内容为微软雅黑字体*/
+	margin: 0px;
+	/*设置body上下左右边距为0px*/
+	margin: 0px;
+}
+
+ul,
+li {
+	list-style-type: none;
+}
+
+
+/******************************控制<a></a>标签的样式************************************/
+
+li a {
+	text-decoration: none;
+	/*定义链接文字样式（斜体，下划线等属性）*/
+	background: #2aaf59;
+	/*标签的背景颜色*/
+	color: white;
+	/*字体颜色*/
+}
+
+
+/******************************网页头部的样式************************************/
+
+#header {
+	float: left;
+	/*左浮动*/
+	background: #2aaf59;
+	/*背景色*/
+	width: 100%;
+	/*百分比宽度*/
+	margin-bottom: 20px;
+	/*外边距的下面部分*/
+}
+
+
+/***************************************导航栏项目列表样式控制************************************/
+
+#header ul li {
+	float: left;
+	/*列表向左浮动*/
+}
+
+#header ul li a {
+	/*无序列表a标签的样式*/
+	font-size: 14px;
+	/*字体大小*/
+	width: 90px;
+	/*a标签的宽度*/
+	text-align: center;
+	/*a标签内的文本居中*/
+	display: block;
+	/*元素生成显示框的类型*/
+	height: 40px;
+	/*a标签的高度*/
+	line-height: 40px;
+	/*文本的行高，一般与框的高度一样，这样就会居中*/
+}
+
+#header ul li ul {
+	position: absolute;
+	/*绝对定位*/
+	display: none;
+	/*元素生成显示框的类型*/
+}
+
+#header ul li ul li {
+	/*列表内的列表浮动状态*/
+	float: none;
+}
+
+#header ul li ul li a {
+	/*列表内的列表的a标签的背景颜色和字体颜色*/
+	background: #f8f8f8;
+	color: black;
+}
+
+#header ul li:hover ul {
+	/*列表内的列表标签的鼠标移动特效是显示ul为块级元素*/
+	display: block;
+}
+
+
+/***************************************main主体 div样式控制************************************/
+
+.main {
+	width: 98%;
+	height: auto;
+	/*自动*/
+	border: 0px solid #d4d4d4;
+	/*边框的宽度和颜色*/
+	border-radius: 5px;
+	/*边框的圆角大小*/
+	clear: both;
+	/*清除浮动*/
+	z-index: 1;
+	/*页面层叠优先级，越高越前*/
+	margin: 1% auto 1%;
+}
+
+
+/***************************************表格单元格样式控制************************************/
+
+.table1 {
+	width: 100%;
+	border-collapse: collapse;
+}
+.table1 table{
+	width:100%;}
+
+.table1 tr {/*这个是最下方的列表基本信息列表样式*/
+	border: 1px solid #d4d4d4;
+	width: 5%;
+	text-align: center;
+	background: #eff6f7;
+	height: 35px;
+}
+.table1 td {
+	border: 1px solid #d4d4d4;
+}
+.table1-4{/*这个是功能性展示栏表格的样式，可以操作的表格样式*/
+	border-collapse:   separate;   border-spacing:   15px;
+	
+}
+
+#window {
+	height: 800px;
+	width: 100%;
+	border: 0px;
+}
+
+
+/***************************************输入框样式A************************************/
+
+.input {
+	font-size: 12px;
+	color: #595959;
+	vertical-align: ;
+	: middle;
+	/*设置元素的垂直对齐方式*/
+	height: 30px;
+	width: 200px;
+	padding: 7px 9px;
+	border: 1px solid #ccc;
+	border-top-color: #a6a6a6;
+	/*边框上边那条线的颜色*/
+}
+
+
+/***************************************输入框样式B************************************/
+
+.input1 {
+	font-size: 12px;
+	color: #595959;
+	vertical-align: middle;
+	/*设置元素的垂直对齐方式*/
+	height: 28px;
+	width: 200px;
+	padding: 7px 9px;
+	border: 1px solid #ccc;
+	border-top-color: #a6a6a6;
+	margin: 0px;
+	line-height: 28px;
+}
+
+/***************************************按钮样式A************************************/
+
+.botton {
+	background-color: #f9af02;
+	border: #b67f00 1px solid;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 14px;
+	margin-left: 5px;
+	text-align: center;
+	padding: 0 5px;
+	font-family: 黑体;
+}
+
+
+/***************************************按钮鼠标经过样式************************************/
+
+.botton:hover {
+	background-color: #f9af02;
+	border: #b67f00 1px solid;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 14px;
+	margin-left: 3px;
+	text-align: center;
+	padding: 0 5px;
+	font-family: 黑体;
+	margin: 0px;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
+	/*按钮的阴影*/
+}
+/***************************************用于显示金钱总额的div样式************************************/
+.mny {
+	float: right;
+	color: #f9af02;
+}
+
+
+
+
+
+/***************************************按钮样式MSGBOX（弹窗里的按钮样式）************************************/
+
+.toolbt {
+	background-color: #f9af02;
+	border: #b67f00 1px solid;
+	width: auto;
+	height: 25px;
+	line-height: 25px;
+	color: #fff;
+	font-size: 12px;
+	margin-left: 5px;
+	text-align: center;
+	padding: 0 5px;
+	font-family: 黑体;
+	/*box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);*/
+	z-index: 500;/*页面层叠优先级*/
+}
+
+/***************************************按钮样式MSG鼠标经过样式************************************/
+.toolbt:hover{
+	background-color: #f9af02;
+    border: #b67f00 1px solid;
+    width: auto;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+    text-align: center;
+    padding: 0 5px;
+	font-family:黑体;
+	
+    box-shadow: 2px 2px 5px 1px rgba(249,175,2,0.5);
+	 z-index:500;
+}
+
+
+/***************************************输入框样式C************************************/
+.text {
+	font-size: 12px;
+	color: #595959;
+	vertical-align: middle;
+	height: 30px;
+	width: auto;
+	border: 1px solid #ccc;
+	border-top-color: #a6a6a6;
+}
+.input_td {
+	font-size: 12px;
+	color: #595959;
+	vertical-align: middle;
+	height: 100%;
+
+	background:rgba(255,255,255,0);
+	border: 0px solid #ccc;
+	border-top-color: #a6a6a6;
+	text-align:center;
+	overflow: hidden;width:auto;
+}
+.input_td_2 {
+	font-size: 12px;
+	color: #595959;
+	vertical-align: middle;
+	height: 100%;
+	width:auto;
+	background:#eff6f7;
+	border: 0px solid #ccc;
+	border-top-color: #a6a6a6;
+	text-align:right;
+}
+/***************************************输入框样式D************************************/
+.text2 {
+	font-size: 12px;
+	text-align:center;
+	width: 15px;
+	color: #595959;
+	vertical-align: middle;
+	height: 30px;
+	border: #FBFBFB;
+	border: 1px solid #ccc;
+	border-top-color: #a6a6a6;
+}
+/**************************************栏目最外层div样式*************************************/
+.box {
+	color: #234;
+	border: 1px solid #cacaca;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .07);
+	margin: 10px 5px 30px 5px;
+	width: 99%;
+}
+/***************************************弹出窗口外层div样式************************************/
+.toolbox {
+	color: #234;
+	border: 1px solid #cacaca;
+	box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.7);
+	/*margin: 5% auto auto 10%;*/
+	height: auto;
+	width: 700px;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	background: #fff;
+	display: none;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin-top:100px;
+}
+/***************************************输入框样式A************************************/
+.toolbox .box_title {
+	/*-webkit-border-radius: 10px;*/
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	//边框圆角
+}
+/******************************************弹出窗口的标题栏样式************************************/
+.box_title {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 5px 10px 5px 10px;
+	border-bottom: 1px solid #bae4dc;
+	background: #bae4dc;
+	margin-bottom: 12px;
+}
+
+.box_title input {
+	float: right;
+}
+/***************************************窗口/栏目内容************************************/
+.box_content {
+	padding: 10px;
+	display: block;
+	clear:both;
+
+}
+.toolbox .box_content{
+		height:300px; overflow:auto; margin:0px;	
+}
+/***************************************放置表单的item样式控制元素************************************/
+.item {
+	width: auto;
+	float: left;
+	color: #353535;
+	font-family: Microsoft YaHei;
+	line-height: 14px;
+	margin: 0px 5px 10px 5px;
+}
+/***************************************放置表单元素前面的文字的item_name样式控制************************************/
+.item_name {
+	margin-right: 10px;
+	padding-top: 9px;
+	float: left;
+}
+
+
+.item .text {/*item里面的输入框样式C(text)的样式控制*/
+	float: left;
+}
+
+.items {/*item集合 占一行*/
+	margin: 2px;
+	width: 100%;
+	padding: 10px;
+	height: 32px;
+}
+
+.close {/*放置弹出窗口右上角的关闭按钮的close*/
+	/*font-size: 24px;*/
+	float: right;
+	/*line-height: 20px;*/
+	cursor:pointer;
+}
+
+.close:hover {/*关闭按钮的鼠标经过样式*/
+	color: #5C5C5C;
+}
+
+.caption {/*弹窗标题文字caption*/
+	width: auto;
+	float: left;
+	margin: 5px 10px;
+	font-size:14px;
+}
+/***************************************放置表单元素前面的文字的item_name样式控制********************************/
+.back {
+	display: none;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 500%;
+	position: absolute;
+	z-index: 998;
+	background: rgba(200, 200, 200, 0.5);
+}
+/****************************************这是遮罩层的背景层样式************************************************/
+
+#bg {
+	display: none;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 998;
+	background: rgba(200, 200, 200, 0.5);
+}
+/****************************************这是遮罩层显示层样式************************************************/
+#show {
+	display: none;
+	position: absolute;
+	top: 25%;
+	left: 22%;
+	width: 800px;
+	height: 420px;
+	border: 1px solid #E8E9F7;
+	background-color: white;
+	z-index: 1002;
+	overflow: auto;
+}
+
+#bg1 {
+	display: none;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 998;
+	background: rgba(200, 200, 200, 0.5);
+}
+
+#show1 {
+	display: none;
+	position: absolute;
+	top: 25%;
+	left: 22%;
+	width: 53%;
+	height: 49%;
+	border: 1px solid #E8E9F7;
+	background-color: white;
+	z-index: 1002;
+	overflow: auto;
+}
+
+.showdiv {/*按钮弹出窗口的标题栏样式*/
+	text-align: center;
+	font-size: 16px;
+	
+}
+
+.boxbt {/*弹窗底部栏*/
+	text-align: center;
+	padding:10px;
+	margin-top: 50px;
+}
+
+#additem {/*添加项目的窗口*/
+	z-index: 1000;
+}
+
+#addsp {
+	z-index: 1000;
+}
+
+
+
+/**以下是20160109新增的*/
+.page a{
+	background:#f9af02;
+	color:#FFF;
+	padding:0px 5px 0px 5px;
+	
+	}
+.disabled{
+    width: auto;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+    text-align: center;
+    padding: 0 5px;
+	font-family:黑体;
+	z-index:500;
+	border-color: rgb(51, 51, 51);
+	background:#666;
+	border:#333;
+
+	}
+#msgbox{display:none;
+}
+.group{
+	width:auto;
+	padding:10px;
+	height:auto;
+	border:1px solid #999;
+	margin:10px;
+	
+}
+.head{
+	/* text-align: center; */
+height: 30px;
+width: 30px;
+overflow: hidden;
+border: 1px solid white;
+border-radius: 100px;
+margin-top:5px;
+}
+.label-tips{
+	color:#F33;
+	overflow:hidden;
+	height:50px;
+	border:1px solid #03F;
+	border-radius:10px;
+	text-align:center;
+	padding:20px auto;
+	line-height:40px;
+	margin:40px 10px 10px 10px;
+	display:none;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
+   
+}
+.qrcode{
+	text-align:center;
+}
+.ul li{
+	float:left;
+	margin-left:20px;
+}
+#range{
+	height:30px;
+	width:60%;
+}
+.ul_br li{
+	margin:10px;
+}
+.button-yuan{
+	height:20px;
+	width:20px;
+	border-radius:40px;
+	border:1px solid #b67f00;
+	background:#f9af02;
+	color:#FFF;
+	cursor:pointer;
+	
+
+}
+.ul-tool{
+	margin:0px 300px 0px 300px;
+}
+.ul-tool li{
+	float:left;
+	margin:0px 5px 0px 5px;
+}
+.ul-tool .to{
+	margin:10px 0px auto 0px;
+}
+.maxtd{
+	max-width:5%;
+	overflow:hidden;
+}
+
+

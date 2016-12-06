@@ -1,0 +1,22 @@
+body{
+	background-color:whitesmoke;
+	font-size:16px;
+}
+.container-fluid{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.container-fluid .row{
+	height: 50px;
+}
+#dropdownMenu1{
+	width: 100%;
+}
+.row .input-group button{
+	border: 1px solid #cccccc;
+	background-color: white;
+	border-radius:0 3px 3px 0 ;
+}
+
+
+

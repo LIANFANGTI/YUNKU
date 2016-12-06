@@ -1,0 +1,8 @@
+api.ctrl.php		//用于授权事件接收 收取解绑信息及component_verify_ticket
+auth.class.php		//公众号代授权绑定时用到的
+index.php		//例子，示例公众号从授权到获取到公众号信息
+wxBizMsgCrypt.php	//用于消息解密
+engine_auth.php		//用户公众号代授权绑定后的粉丝消息处理，还包括全网发布的代码，重点参考start()方法
+
+
+注：以上全部文件不能单独使用，只做参考用，请看明白逻辑后再糅合到你的系统里。

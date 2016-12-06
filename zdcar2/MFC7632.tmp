@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>一库汽车管理系统</title>
+		<link rel="stylesheet" href="css/index.css" type="text/css" />
+        <script src="js/js.js"></script>
+        <script src="js/jquery-1.10.2.js"></script>
+	</head>
+
+	<body>
+<div class="back" id="back" ></div>
+<div class="toolbox" id="additem">
+           	<div class="box_title">
+            	<h4 class="caption">新建项目</h4>
+                <div class="close" onClick="closeb('additem')">×</div>
+            
+            </div>
+                <div class="box_content">
+                	<div class="items">
+                	 <div class="item"><span class="item_name">项目编码：</span><input type="text" class="text"  /></div>
+                     <div class="item"><span class="item_name">项目名称：</span><input type="text" class="text"  /></div>
+                     <div class="item"><span class="item_name">项目类型：</span>
+                    	  <select class="text" >
+							<option>洗车</option>
+							<option>美容</option>
+							<option>维修</option>
+                         </select>
+                     </div>
+                    </div>
+                    <div class="items">
+                     <div class="item"><span class="item_name">工时：</span><input type="text" class="text"  /></div>
+                     <div class="item"><span class="item_name">单价：</span><input type="text" class="text"  /></div>
+                   
+                     <div class="item"><span class="item_name">故障类型：</span><input type="text" class="text"  /></div>
+                    </div>
+                </div>
+                <div class="boxbt"><input type="button" value="保存" class="botton" onClick="closeb('additem')"></div>
+                </div>
+		<div id="main">
+
+			<hr />
+			<br />
+            <div class="box">
+           		<div class="box_title"><h4 class="caption">开单信息</h4>
+                	<div class="close"><input type="button" class="botton" value="保存"/></div>
+                </div>
+                <div class="box_content">
+                	<div class="item"><span class="item_name">单号：</span><input type="text" class="text" value="KD201601020001" disabled/></div>
+                    <div class="item"><span class="item_name">客户：</span><input type="text" class="text" value="李狗蛋"  onClick="add('ckehu')"/></span></div>
+                    <div class="item"><span class="item_name">故障描述：</span><input type="text" class="text"  /></div>
+                    <div class="item"><span class="item_name">备注：</span><textarea></textarea></div>
+                </div>
+                <div class="boxbt">
+           <div class="toolbox" id="ckehu">
+           		<div class="box_title" ><h4 class="caption">客户选择</h4>
+                 	<input type="search"  class="input1"  placeholder="输入账户信息查询"/>
+                     <input type="button"  class="botton" value="创建客户" />
+                	<div class="close" onClick="onClick="$('#ckehu').hide(500);"">×</div>
+                </div>
+                <div class="box_content">
+                    <div class="table1">
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <b><td>姓名</td>
+                                <td>联系电话</td>
+                                <td>通讯地址</td>
+                                <td>车型</td>
+                                <td>车牌</td>
+                                <td>备注</td>
+                                <td>操作</td></b>
+                            </tr>
+                            <tr>
+                                <td>李狗蛋</td>
+                                <td>13587533218</td>
+                                <td>浙江交通职业技术学院</td>
+                                <td>奥迪A8</td>
+                                <td>浙A54250</td>
+                                <td>无</td>
+                                <td><a href="#" class="botton" >选择</a></td>
+                            </tr>
+                       </table>
+                    </div>
+                </div>
+                <div class="boxbt"></div>
+           </div>
+           	
+           
+		   
+ 
+            
+            <div class="box" >
+            	<div class="box_title" onClick="$('#weixiuc').toggle(500);"><h4>维修项目</h4></div>
+            	<div class="box_content" id="weixiuc">
+                	<div class="table1">
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td> 序号 </td>
+						<td>项目编码</td>
+						<td>项目名称</td>
+						<td>单价</td>
+						<td>工时</td>
+						<td>优惠</td>
+						<td>金额</td>
+						<td>开始时间</td>
+						<td>完工时间</td>
+						<td>施工人员</td>
+						<td>项目分类</td>
+						<td>备注</td>
+						<td>操作</td>
+					</tr>
+					<tr>
+						<td>01</td>
+						<td>KD201512310001</td>
+						<td>测试项目</td>
+						<td>100</td>
+						<td>2</td>
+						<td>10</td>
+						<td>190</td>
+						<td><input type="date" class="text2"></td>
+						<td><input type="date" class="text2"></td>
+						<td><select class="text2" ><option>员工1</option></select></td>
+						<td><select class="text2"><option>洗车</option><option>美容</option></select></td>
+						<td><input type="text"  value="无" class="text2"/></td>
+                        <td><a href="#" class="botton">选择</a></td>
+					</tr>
+                    <tr>
+                    	<td colspan="13"><input type="button" value="新建" class="botton" onClick="add('additem')"></td>
+                    </tr>
+				</table>
+			</div>
+                </div>
+            </div>
+            
+          
+            
+			<div class="toolbox" id="addsp">
+            	<div class="box_title">
+                    <h4 class="caption">新建商品</h4>
+                    <div class="close" onClick="closeb('addsp')">×</div>
+                </div>
+                <div class="box_content">
+                	<form>
+                    <div class="items">
+                        <div class="item"><span class="item_name">商品编码：</span><input type="text" class="text" /> </div>
+                         <div class="item"><span class="item_name">商品名称：</span><input type="text" class="text" /></div>
+                         <div class="item"><span class="item_name">单位:</span><input type="text" class="text" /> </div>
+                     </div>
+                     <div class="items">
+                        <div class="item"><span class="item_name">期初成本：</span><input type="text" class="text"/></div>
+                         <div class="item"><span class="item_name">期初库存：</span><input type="text" class="text"/></div> 
+                          <div class="item"><span class="item_name">品牌:</span><input type="text" class="text" /></div>
+                     </div>
+                     <div class="items">
+                          <div class="item"><span class="item_name">规格：</span><input type="text" class="text"/> </div>
+                        <div class="item"><span class="item_name">销售单价：</span><input type="text" class="text"/></div>
+                        <div class="item"><span class="item_name">适用车型：</span><input type="text" class="text"/> </div>
+                     </div>
+                      
+                            </form>
+                </div>
+                <div class="boxbt"> <input type="button" value="保存" class="botton" /></div>
+            </div>
+			
+			<div class="box">
+            	<div class="box_title" onClick="$('#xuanzesp').toggle(500);"><h4>商品选择</h4></div>
+                    <div class="box_content" id="xuanzesp">
+                        <div class="table1">
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td> 序号 </td>
+                                <td>商品编码</td>
+                                <td>商品名称</td>
+                                <td>品牌</td>
+                                <td>规格</td>
+                                <td>适用车型</td>
+                                <td>单位</td>
+                                <td>销售价格</td>
+                                <td>数量</td>
+                                <td>优惠</td>
+                                <td>金额</td>
+                                <td>领料人员</td>
+                                <td>商品备注</td>
+                                <td>操作</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>SP201512310001</td>
+                                <td>米其林轮胎</td>
+                                <td>米其林</td>
+                                <td>黑</td>
+                                <td>个</td>
+                                <td>200</td>
+                                <td>1</td>
+                                <td>
+                                    <input type="text" class="text2">
+                                </td>
+                                <td>0元</td>
+                                <td>200</td>
+                                <td>张三</td>
+                                <td> <input type="text" class="text2"></td>
+                                <td><a href="#" class="botton">选择</a></td>
+                            </tr>
+                            <tr>
+                            	<td colspan="14"><input type="button" value="新建" class="botton" onClick="add('addsp')"></td>
+                            </tr>
+                        </table>
+                      </div>  
+                    </div>
+				</div>
+           </div>
+		
+		</div>          	
+            </div>	
+		
+	</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="ui-base.css">
+    <link rel="stylesheet" href="ui-box.css">
+    <link rel="stylesheet" href="ui-color.css">
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="../demo-css-js/video-js.css" rel="stylesheet" type="text/css">
+    <link href="../demo-css-js/video-js-smail.css" rel="stylesheet" type="text/css">
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script src="../demo-css-js/video.js"></script>
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <video id="myvideo" class="video-js vjs-default-skin-smail fg-huise" controls preload="none" width="640" height="344"
+           poster="../img/yule-1.jpg"
+           data-setup="{}">
+      <source src="../video/yule-1.mp4" type="video/ogg" />
+      <source src="../video/yule-1.mp4" type="video/mp4" />
+        <track kind="captions" src="../demo-css-js/demo.captions.vtt" srclang="en" label="English">
+        <track kind="subtitles" src="../demo-css-js/demo.captions.vtt" srclang="en" label="English">
+    </video>
+    <video id="myvideo1" class="video-js vjs-default-skin-smail fg-huise hand"   preload="none" width="640" height="344"
+           poster="../img/yule-1.jpg"
+           >
+        <source src="../video/yule-1.mp4" type="video/ogg" />
+        <source src="../video/yule-1.mp4" type="video/mp4" />
+        <track kind="captions" src="../demo-css-js/demo.captions.vtt" srclang="en" label="English">
+        <track kind="subtitles" src="../demo-css-js/demo.captions.vtt" srclang="en" label="English">
+    </video>
+
+    <script>
+        var video = $('#myvideo');
+//
+//        $("#myvideo1").click(function () {
+//            $("#myvideo").attr("src","../video/yule-2.mp4");//更新url
+//            video[0].play();
+//        });
+
+
+$(document).ready(function(){
+    $("#myvideo1").click(function(){
+        video.attr("src","../video/yule-2.mp4");//更新url
+        video[0].play();
+//        $("#myvideo").attr("autoplay","true");//直接播放
+    })
+});
+        function getKey()
+        {
+                if(event.keyCode==13){
+                     alert('click enter');
+                    }
+            }
+
+
+    </script>
+    <input type="text" id="urlstr"  style="width:1000px;" onkeypress="getKey();"/>
+</body>
+</html>

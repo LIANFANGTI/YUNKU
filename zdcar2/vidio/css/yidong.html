@@ -1,0 +1,29 @@
+<html>
+<meta charset="UTF-8">
+<head>
+
+</head>
+
+<body>
+
+</body>
+<script src="jquery.js"></script>
+<p id="a"></p>
+<script>
+    var p=0
+    function demo()
+    {
+        p++;
+        document.getElementById("a").innerHTML=p;
+    }
+
+
+    $(document).ready(function(){
+        setInterval(function(){
+            document.getElementById("demo").click();
+        },2000)
+
+    })
+</script>
+    <input type="button"value="点击"onclick="demo()"id="demo">
+</html>

@@ -1,0 +1,14 @@
+body{
+	font-size:16px;
+}
+.container-fluid{
+	margin-top:100px;
+
+}
+.container-fluid .row{
+		margin-bottom:10px;
+}
+.txt{
+	border-radius:5px;
+	border:none;
+}

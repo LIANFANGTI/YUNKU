@@ -1,0 +1,25 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	font-size:16px;
+}
+
+.container-fluid{
+	margin-bottom:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.container-fluid table-bordered{
+	
+}
+
+
+
+
+
+	.row table  tbody tr  td{
+				vertical-align: middle;
+
+			}
